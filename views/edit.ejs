@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>Edit food</title>
+</head>
+<body>
+    <%- include("./partials/nav.ejs") %>
+    <p>Do you have new information regarding a product? Please use this form to update the product.</p>
+    <form action="/cats/<%=inventory.id%>?_method=PUT" method="POST">
+    <input type="text" name="name" value="<%=inventory.name%>" placeholder="Name" /><br>
+    <input type="text" name="img" value="<%=inventory.img%>" placeholder="Image URL" /><br>
+    <input type="number" name="price" value="<%=inventory.price%>" placeholder="Price" /><br>
+    <input type="text" name="review" value="<%=inventory.review%>" placeholder="Review" /><br>
+    <input class="button" type="submit" name="" value="Submit Changes"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>Add New Cat Food</title>
+</head>
+<body>
+    <%- include("./partials/nav.ejs") %>
+    <h1>We want to hear from you!</h1>
+    <p>Have a favorite cat food to add to the list? Contribute with this form.</p>
+    <form action="/cats" method="POST">
+        <input type="text" name="name" placeholder="Name" /><br>
+        <input type="text" name="img" placeholder="Image URL" /><br>
+        <input type="number" name="price" placeholder="Price" /><br>
+        <input type="text" name="review" placeholder="Enter review" /><br>
+        <input class="button" type="submit" name="" value="Add food" />
+    </form>
+</body>
+</html>

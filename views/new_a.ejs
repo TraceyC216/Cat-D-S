@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>New Advice</title>
+</head>
+<body>
+    <%- include("./partials/nav.ejs") %>
+    <h1>Please share your thoughts here</h1>
+    <form action="/cats/advice" method="POST">
+        Your thoughts: <input type="text" name="tip" /><br>
+        <input class="button" type="submit" value="SUBMIT HERE">
+    </form>
+    
+</body>
+</html>

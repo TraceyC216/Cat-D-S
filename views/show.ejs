@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <title>Cat Food Show Page</title>
+  </head>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h1><%=inventory.name%></h1>
+    <br />
+    <img src="<%=inventory.img%>" height="200" /><br />
+   <div id="price">$<%=inventory.price%></div><br />
+    <p id="review"><%=inventory.review%></p>
+    <br />
+    <form action="/cats/<%=inventory.id%>/likes?_method=PUT" method="POST" style="display: inline;">
+      <button class="button">
+        LIKE
+        <img
+          src="https://imgur.com/pvkMP9d.png"
+          alt="pawprint like button"
+        /></button
+    ></form>
+    <%=inventory.likes%>
+  </body>
+</html>
