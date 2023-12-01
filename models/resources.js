@@ -6,6 +6,6 @@ const resourcesSchema = new mongoose.Schema({
    description: {type: String} 
 }, {timestamps: true})
 
-const Inventory = mongoose.model('Resources', resourcesSchema);
+const Resources = mongoose.model('Resources', resourcesSchema);
 
 module.exports = Resources

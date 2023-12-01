@@ -2,6 +2,7 @@ const express = require("express")
 const router = express.Router()
 const Inventory = require("../models/inventory.js")
 const Advice = require("../models/advice.js")
+const Resources = require("../models/resources.js")
 
 //INDEX
 
@@ -20,6 +21,14 @@ router.get("/advice", (req, res) => {
         })
     })
    
+})
+
+router.get("/resources", (req, res) => {
+    Resources.find({}, (err, allResources) => {
+        res.render("index_r.ejs", {
+            help:allResources
+        })
+    })
 })
 
 //NEW
