@@ -8,7 +8,7 @@ const methodOverride = require("method-override")
 const catsController = require("./controllers/inventory.js")
 
 //DATABASE CONNECTION
-mongoose.connect("mongodb://127.0.0.1:27017/cats")
+mongoose.connect(mongoUIR + "cats")
 mongoose.connection.once("open", () => {
     console.log("connected to mongo")
 })
