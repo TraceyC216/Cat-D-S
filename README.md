@@ -19,6 +19,9 @@ The purpose is to provide advice and support to new cat owners. The app will lin
 * [About the Author](#author)
 
 ## <a name="technologiesused"></a>Technologies Used
+* Node.js
+* Mongoose
+* Express
 * EJS
 * JavaScript
 * HTML5
