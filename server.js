@@ -23,7 +23,7 @@ app.use("/cats", catsController)
 
 
 app.get("/", (req, res) => {
-    res.render("new.ejs")
+    res.redirect("/cats/home")
 })
 
 
