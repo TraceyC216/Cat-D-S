@@ -41,6 +41,11 @@ router.get("/new_a", (req, res) => {
     res.render("new_a.ejs")
 })
 
+//NEW RESOURCE
+router.get("/new_r", (req, res) => {
+    res.render("new_r.ejs")
+})
+
 //HOME
 router.get("/home", (req, res) => {
     res.render("home.ejs")
@@ -68,6 +73,12 @@ router.put("/:id", (req, res) => {
     })
 })
 
+//UPDATE RESOURCES
+router.put("/:id", (req, res) => {
+    Resources.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedResources) => {
+        res.redirect("/cats/resources")
+    })
+})
 
 //CREATE
 router.post("/", (req, res) => {
@@ -93,6 +104,18 @@ router.post("/advice", (req, res) => {
     })
 } )
 
+//CREATE RESOURCE
+router.post("/resources", (req, res) => {
+    Resources.create(req.body, (err, createdResources) => {
+        if (err) {
+            console.log(err)
+            res.send(err)
+        } else{
+            res.redirect("/cats/resources")
+        }
+    })
+})
+
 //EDIT
 router.get("/:id/edit", (req, res) => {
     Inventory.findById(req.params.id, (err, foundInventory) => {
@@ -102,8 +125,15 @@ router.get("/:id/edit", (req, res) => {
 
 //EDIT ADVICE
 router.get("/:id/edit_a", (req, res) => {
-    Inventory.findById(req.params.id, (err, foundInventory) => {
-        res.render("edit_a.ejs", {inventory:foundInventory})
+    Advice.findById(req.params.id, (err, foundAdvice) => {
+        res.render("edit_a.ejs", {advice:foundAdvice})
+    })
+})
+
+//EDIT ADVICE
+router.get("/:id/edit_r", (req, res) => {
+    Resources.findById(req.params.id, (err, foundResources) => {
+        res.render("/edit_r.ejs", {resources:foundResources})
     })
 })
 

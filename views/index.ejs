@@ -12,19 +12,22 @@
     <p>Your new cat has nutritional needs depending on their age and any prexisting conditions they may have. 
       Your veterinarian will tell you more at your first visit about the best nutrition for your new friend.
     </p>
+    
     <ul>
       <% for(let i = 0; i < meals.length; i++) { %>
       <li>
         <a href="/cats/<%=meals[i].id %>"> 
         <p><%=meals[i].name%></p></a>
+        <div id="foodlist">
         <form action="/cats/<%=meals[i].id%>?_method=DELETE" method="POST" style="display: inline; margin-left: 15px;">
         <input class="button" type="submit" value="DELETE" />
     </form>
     <a href="/cats/<%=meals[i].id; %>/edit"><button class="button">EDIT</button></a><br><br>
+    </div>
       </li>
       <% } %>
     </ul>
-
+ 
     <p>If you have any foods you know, love, and trust. You may add them <a href="/cats/new">here</a></p>
   </body>
 </html>

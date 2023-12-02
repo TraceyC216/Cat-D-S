@@ -8,5 +8,11 @@
 </head>
 <body>
     <%- include("./partials/nav.ejs") %>
+    <p>Does something on this list need updating? Please use this form to make any necessary changes. </p>
+    <form action="/cats/<%=resources.id%>?_method=PUT" method="POST">
+    <input type="text" name="name" value="<%=resources.name%>" placeholder="Name" /><br>
+    <input type="text" name="webAddress" value="<%resources.webAddress"%>" placeholder="URL"><br>
+    <input type="text" name="description" value="<%=resources.description%>" placeholder="Description" /><br>
+    <input class="button" type="submit" name="" value="Submit Changes"/>
 </body>
 </html>

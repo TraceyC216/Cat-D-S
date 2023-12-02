@@ -8,6 +8,12 @@
 </head>
 <body>
     <%- include("./partials/nav.ejs") %>
-    
+    <h1>Please share your favorite resources here:</h1>
+    <form action="/cats/resources" method="POST">
+        <input type="text" name="name" placeholder="Name"><br>
+        <input type="text" name="webAddress"  placeholder="URL"><br>
+        <input type="text" name="description"  placeholder="Description"><br>
+        <input class="button" type="submit" name="" value="Submit Changes"/>
+    </form>
 </body>
 </html>

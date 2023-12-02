@@ -8,26 +8,27 @@
 </head>
 <body>
     <%- include("./partials/nav.ejs") %>
-    <h1>Looking for help?</h1>
+    <h1>Looking for more information?</h1>
     <p>You will probably have a lot of questions and maybe some concerns if you're doing this right. Maybe you're 
         wondering how you can involve your new cat in family outings. Maybe you want to train your cat to do some tricks.
         There are many resources available to help you answer your questions.
     </p>
-    <ul>
+    <ol>
         <% for (let i = 0; i < help.length; i++) { %>
-            <table class="center">
-                
-                <tr>
-                <td><a href="/cats/<%=help[i].id; %>">
+            
+                <li>
+                <a href="<%=help[i].webAddress; %>" target="_blank">
                 <%=help[i].name; %>
-            </a></td>
-                <td><%=help[i].webAddress; %></td>
-                <td><%=help[i].description; %></td>
-            </tr>
-            </table>
+                </a>
+                <%=help[i].description; %></li>
+            <br>
+         
         <%}%>
+    </ol>
+    <br>
 
         <a class="button" href="/cats/new_r">Add a resource</a>
-    </ul>
+       
+   
 </body>
 </html>
