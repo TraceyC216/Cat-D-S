@@ -6,16 +6,16 @@ const Resources = require("../models/resources.js")
 
 //INDEX
 
-router.get("/", (req,res) => {
-    Inventory.find({}, (err, allInventory) => {
+router.get("/", async(req,res) => {
+    await Inventory.find({}, (err, allInventory) => {
         res.render("index.ejs", {
             meals:allInventory
         })
     })
 });
 
-router.get("/advice", (req, res) => {
-    Advice.find({}, (err, allAdvice ) => {
+router.get("/advice", async (req, res) => {
+    await Advice.find({}, (err, allAdvice ) => {
         res.render("index_a.ejs", {
             ideas:allAdvice
         })
@@ -23,8 +23,8 @@ router.get("/advice", (req, res) => {
    
 })
 
-router.get("/resources", (req, res) => {
-    Resources.find({}, (err, allResources) => {
+router.get("/resources", async (req, res) => {
+    await Resources.find({}, (err, allResources) => {
         res.render("index_r.ejs", {
             help:allResources
         })
