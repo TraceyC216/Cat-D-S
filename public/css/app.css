@@ -11,6 +11,12 @@ body {
   text-align: center;
 }
 
+nav {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
 nav ul {
   float: left;
   width: 100%;
