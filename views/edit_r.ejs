@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/app.css">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <%- include("./partials/nav.ejs") %>
-    <p>Does something on this list need updating? Please use this form to make any necessary changes. </p>
+    <p class="container-fluid">Does something on this list need updating? Please use this form to make any necessary changes. </p>
     <form action="/cats/<%=resources.id%>?_method=PUT" method="POST">
     <input type="text" name="name" value="<%=resources.name%>" placeholder="Name" /><br>
     <input type="text" name="webAddress" value="<%resources.webAddress"%>" placeholder="URL"><br>
