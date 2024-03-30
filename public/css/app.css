@@ -11,26 +11,16 @@ body {
   text-align: center;
 }
 
-/* nav {
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
 
-nav ul {
-  float: left;
-  width: 100%;
-  padding: 0 750px;
-  margin: 0;
-  list-style-type: none;
+nav {
   border-bottom: 1px solid black;
 }
 nav a {
-  float: left;
+  /* float: left;
   width: 96px;
-  text-decoration: none;
+  text-decoration: none; */
   color: seagreen;
-  padding: 8px 15px;
+  /* padding: 8px 15px; */
   border-right: 1px solid black;
 }
 
