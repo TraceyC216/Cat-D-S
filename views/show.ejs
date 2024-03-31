@@ -16,11 +16,11 @@
    <div class="card" style="width: 18rem;">
     <img src="<%=inventory.img%>" class="card-img-top" alt="...">
     <div class="card-body">
-      <!-- <h5 class="card-title"><%=inventory.name%></h5> -->
-      <p class="card-text">$<%=inventory.price%></p>
+      <h5 class="card-title"><%=inventory.price%></h5>
+      <p class="card-text">$<%=inventory.review%></p>
     </div>
   </div>
-    <p class="container-fluid"><%=inventory.review%></p>
+    
     <br />
     <form action="/cats/<%=inventory.id%>/likes?_method=PUT" method="POST" style="display: inline;">
       <button class="button">
