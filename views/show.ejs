@@ -9,11 +9,18 @@
   </head>
   <body>
     <%- include("./partials/nav.ejs") %>
-    <h1><%=inventory.name%></h1>
+   <h1><%=inventory.name%></h1>
     <br />
-    <img src="<%=inventory.img%>" height="200" /><br />
-   <div id="price">$<%=inventory.price%></div><br />
-    <p id="review"><%=inventory.review%></p>
+    <!-- <img src="<%=inventory.img%>" height="200" /><br />
+   <div id="price">$<%=inventory.price%></div><br /> -->
+   <div class="card" style="width: 18rem;">
+    <img src="<%=inventory.img%>" class="card-img-top" alt="...">
+    <div class="card-body">
+      <!-- <h5 class="card-title"><%=inventory.name%></h5> -->
+      <p class="card-text">$<%=inventory.price%></p>
+    </div>
+  </div>
+    <p class="container-fluid"><%=inventory.review%></p>
     <br />
     <form action="/cats/<%=inventory.id%>/likes?_method=PUT" method="POST" style="display: inline;">
       <button class="button">

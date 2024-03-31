@@ -16,11 +16,8 @@ nav {
   border-bottom: 1px solid black;
 }
 nav a {
-  /* float: left;
-  width: 96px;
-  text-decoration: none; */
   color: seagreen;
-  /* padding: 8px 15px; */
+  padding: 8px 15px;
   border-right: 1px solid black;
 }
 
@@ -28,9 +25,7 @@ nav a:hover {
   color: black;
 } */
 
-/* nav li {
-  display: inline;
-} */
+
 
 h1 {
   font-family: "Kanit", sans-serif;
