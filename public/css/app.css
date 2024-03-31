@@ -37,7 +37,7 @@ ul {
   list-style-type: none;
 }
 
-.review {
+/* .review {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -45,7 +45,7 @@ ul {
 
 #price {
   font-weight: bold;
-}
+} */
 
 form {
   text-align: center;
@@ -59,32 +59,32 @@ form {
   text-decoration: none;
 }
 
-p {
+/* p {
   margin-top: 50px;
   padding: 0 500px;
-}
+} */
 
-img {
+/* img {
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+} */
 
-#review {
+/* #review {
   padding: 0 800px;
-}
+} */
 
 /* #cds_description {
   margin-top: 40px;
 } */
 
-.homepage_photos {
+/* .homepage_photos {
   display: flex;
   justify-content: space-around;
   margin-top: 35px;
-}
+} */
 
 
-ol {
+/* ol {
 text-align: left;
-}
+} */
 

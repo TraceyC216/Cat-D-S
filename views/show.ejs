@@ -11,13 +11,12 @@
     <%- include("./partials/nav.ejs") %>
    <h1><%=inventory.name%></h1>
     <br />
-    <!-- <img src="<%=inventory.img%>" height="200" /><br />
-   <div id="price">$<%=inventory.price%></div><br /> -->
+    
    <div class="card" style="width: 18rem;">
     <img src="<%=inventory.img%>" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title"><%=inventory.price%></h5>
-      <p class="card-text">$<%=inventory.review%></p>
+      <h5 class="card-title">$<%=inventory.price%></h5>
+      <p class="card-text"><%=inventory.review%></p>
     </div>
   </div>
     
