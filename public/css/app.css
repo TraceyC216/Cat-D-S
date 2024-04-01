@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Noto+Sans:wght@300&display=swap");
 
 body {
-  background-color:ghostwhite;
+  background-color:#bdbbd7;
   font-family: "Noto Sans", sans-serif;
   text-align: center;
 }
@@ -53,8 +53,8 @@ form {
 }
 
 .button {
-  background-color: lightgray;
-  border: darkgrey outset 3px;
+  background-color: #E6E6FA;
+  border: #d4d4fa ey outset 3px;
   margin-top: 5px;
   text-decoration: none;
 }
